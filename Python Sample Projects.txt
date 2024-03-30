@@ -1,0 +1,133 @@
+
+# To Display Calendar :
+
+import calendar
+
+# Enter the month and year
+yy = int(input("Enter year: "))
+mm = int(input("Enter month: "))
+
+# display the calendar
+print(calendar.month(yy,mm))
+
+------------------------------------------------------------------------------------------------------------
+
+## Basic Calculator ##
+
+# Function to add two numbers
+def add(x , y):
+  return x + y
+
+# Function to substract two numbers
+def subtract(x , y):
+  return x - y
+
+# Function to multiply two numbers
+def multiply(x , y):
+  return x * y
+
+# Function to divide two numbers
+def divide(x , y):
+  return x / y
+
+print('welcome to cdwith Ani')
+print('Select Operation : ')
+print("1. Add")
+print("2. Substract")
+print("3. Multiply")
+print("4. Divide")
+
+choise = input("Enter a choise(1/2/3/4) : ")
+num1 = float(input("Enter first number : "))
+num2 = float(input("Enter second number : "))
+if choise == '1' :
+  print("Result : ",add(num1 , num2))
+elif choise == '2' :
+  print("Result : ",subtract(num1 , num2))
+elif choise == '3' :
+  print("Result : ",multiply(num1 , num2))
+elif choise == '4' :
+  print("Result : ",divide(num1 , num2))
+else :
+  print("Invalid Input")
+
+--------------------------------------------------------------------------------------------------------------------
+
+Write a Program to Generate Multiplication Table ?
+# Enter print Table Number : 7
+
+i=1
+num = int(input('Display multiplication table of '))
+for i in range(1,11):
+  print(num, 'X', i, '=', num*i)
+
+------------------------------------------------------------------------------------------------------------------------
+
+# Assignment : Billing System
+
+def bill_with_gst(invoice_no,date,product,Quantity,taxable_amount,gst,discount):
+  taxable_amount = Quantity*taxable_amount
+  discount_amount = taxable_amount*discount/100
+  total_taxable_amount = taxable_amount-discount_amount
+  gst_amount = total_taxable_amount*gst/100
+  cgst = gst_amount/2
+  sgst = gst_amount/2
+  invoice_amount = total_taxable_amount+gst_amount
+
+  print('-------Bill-------')
+  print('')
+  print('Invoice no is : ',invoice_no)
+  print('Date :',date)
+  print('product Name :',product)
+  print('Quantaty is :',Quantity)
+  print('Taxable amount : ',taxable_amount)
+  print('Discount : ',discount,'%')
+  print('Discount amount ',discount_amount)
+  print('Total Taxable Amount : ',total_taxable_amount)
+  print('GST Rate : ',gst,'%')
+  print('GST Amount : ',gst_amount)
+  print('CGST : ',cgst)
+  print('SGST : ',sgst)
+  print('Total Invoice Amount ',invoice_amount )
+  print('')
+  print('-------Visit Again-------')
+  print('-------Thankyou-------')
+
+
+#calling function
+
+bill_with_gst(14,10_12_21,'Mobile',8,10000,18,10)
+
+-------------------------------------------------------------------------------------------------------------------------------
+##### HOME LOAN EMI CALCULATOR ##### 
+
+# Home Loan EMI Calculator
+
+# -- Input Section
+# Loan Amount : = ₹ 74,51,512
+# Tenure (Years) :=  15
+# Interest Rate (% P.A.) = 5.19%
+
+# -- output Section
+# Monthly Home Loan EMI : ₹59,666
+# View Details
+# Principal Amount : ₹74,51,512
+# Interest Amount : ₹32,88,408
+# Total Amount Payable : ₹1,07,39,920
+
+
+### Input Section ###
+
+loan_amount = (float(input('Enter Your Loan Amount : ' )))
+period_years = (int(input('Enter Your Tender in Years : ' )))
+interest_rate = (float(input('Enter Your Interest Rate : ' )))
+
+# Monthly intrest rate
+
+period_years = (period_years*12)
+your_monthly_emi = loan_amount/period_years*interest_rate/100
+principle_amount = time = interest_rate*12*period_years
+
+print('Monthly EMI : ',your_monthly_emi)
+print('principal amount :', loan_amount)
+print(time)
